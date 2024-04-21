@@ -26,8 +26,8 @@ public class FlightsController {
     }
 
     @PostMapping("/agregar")
-    public void createFlight(@RequestBody Flight flight, Long companyId) {
-        flightsService.createFlight(flight,companyId);
+    public void createFlight(@RequestBody Flight flight) {
+        flightsService.createFlight(flight);
     }
 
     @GetMapping("/{id}")

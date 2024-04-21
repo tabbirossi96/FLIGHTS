@@ -29,17 +29,17 @@ public class FlightsService {
         double dolarPrice = getDolar();
         return flightUtils.flightMapper(flightList, dolarPrice);
     }
-    public Flight createFlight(Flight flight, Long companyId) {  //agregar
-        Optional<Company> company = companyRepository.findById(companyId)
-                /*.orElseThrow(() -> new IllegalArgumentException("Company not found"))*/;
 
+    public Flight createFlight(Flight flight) {  //agregar
+         /*Optional<Company> company = companyRepository.findById(companyId)
+               .orElseThrow(() -> new IllegalArgumentException("Company not found"));
         flight.setCompany(company);
-        return flightsRepository.save(flight);
+        return flightsRepository.save(flight);*/
 
-        /*   String nombreCompany = flight.getCompany().getName();
+        String nombreCompany = flight.getCompany().getName();
         Company compania = companyRepository.findByName(nombreCompany);
         flight.setCompany(compania);
-        flightsRepository.save(flight);*/
+        return flightsRepository.save(flight);
     }
 
 
