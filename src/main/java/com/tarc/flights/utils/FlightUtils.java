@@ -20,7 +20,7 @@ public class FlightUtils {
 
     public FlightDto flightMapper(Flight flight, double precio){  //modificar esta funcion para que devuelva una lista  con stream
         return new FlightDto(flight.getId(), flight.getOrigen(), flight.getDestino(), flight.getFechaHoraSalida(),
-                flight.getFechaHoraSalida(), flight.getPrecio() * precio, flight.getFrecuencia());
+                flight.getFechaHoraSalida(), flight.getPrecio() * precio, flight.getFrecuencia(),flight.getCompany());
 
     }
 
